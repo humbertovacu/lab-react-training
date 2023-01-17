@@ -38,8 +38,8 @@ function SignUp(){
     passInputClass();
 
     return(
-        <div>
-            <form onSubmit = {handleSubmit}>
+        <div className='form-container'>
+            <form className='sign-up-form' onSubmit = {handleSubmit}>
                 <label htmlFor='email'>Email: </label>
                 <input type='email' name='email' className={correctEmail ? 'green-input' : 'regular-input'} onChange={(event)=>setEmail(event.target.value)}/>
                 <br/>

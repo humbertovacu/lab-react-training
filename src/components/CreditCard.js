@@ -11,12 +11,15 @@ function CreditCard(props){
     } else cardMonth = expirationMonth.toString();
    
     return(
-        <div className = 'credit-card' style = {{ backgroundColor : bgColor, color: color}}>
-            <img src= {type === 'mastercard' ? masterCardLogo : visaLogo } width = {300} alt='user-card'/>
-            <p>{'•••• •••• ••••' + ' ' + number.slice(-4)}</p>
-            <p>Expires {cardMonth}/{cardYear.slice(-2)}</p>
-            <p>Bank: {bank}</p>
-            <p>{owner}</p>
+        <div className='credit-card-container'>
+            <div className = 'credit-card' style = {{ backgroundColor : bgColor, color: color}}>
+                <img src= {type === 'mastercard' ? masterCardLogo : visaLogo } width = {300} alt='user-card'/>
+                <p className='card-number'><b>{'•••• •••• ••••' + ' ' + number.slice(-4)}</b></p>
+                <div className='card-info'>
+                <p>Expires {cardMonth}/{cardYear.slice(-2)}&nbsp;&nbsp;&nbsp;&nbsp;<span>{bank}</span></p>
+                <p>{owner}</p>
+                </div>
+            </div>
         </div>
     )
 
