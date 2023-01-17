@@ -13,6 +13,9 @@ import imgPhoenix from './assets/images/phoenix.jpeg';
 import imgPhoenixGlasses from './assets/images/phoenix-glasses.jpg';
 import Carousel from './components/Carousel';
 import NumbersTable from './components/NumbersTable';
+import Facebook from './components/Facebook';
+import SignUp from './components/SignUp';
+import RgbColorPicker from './components/RgbColorPicker';
 
 function App() {
 
@@ -68,8 +71,14 @@ function App() {
           'https://randomuser.me/api/portraits/women/2.jpg',
           'https://randomuser.me/api/portraits/men/2.jpg'
         ]}/>
-        <br/>
-       <NumbersTable limit={12}/>
+      <br/>
+      <NumbersTable limit={10}/>
+      <br/>
+      <Facebook/> 
+      <br/>
+      <SignUp/>
+      <br/>
+      <RgbColorPicker/>
     </div>
   );
 }

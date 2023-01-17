@@ -7,11 +7,20 @@ function NumbersTable(props){
         }
     return(
         <table className="num-table">
+            <thead>
+                <tr>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>d</th>
+                    <th>e</th>
+                </tr>
+            </thead>
             <tbody>
                 {numberArray.map(number => {
                    return( 
                         <tr key={Math.random()*1000}>
-                            <td rowSpan={5}>{number}</td>
+                            <td>{number}</td>
                         </tr>
                     )
                 })}
